@@ -12,12 +12,9 @@
         }
 
        .container {
-        width: 500px;
+        width: 600px;
             margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #f2f2f2;
         }
 
         h1 {
@@ -33,35 +30,61 @@
             width: 100%;
             padding: 10px;
             margin-bottom: 10px;
+            border: rgb(166, 84, 214) solid 1px;
+            border-radius: 5px;
         }
 
         input[type="submit"] {
             padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
+            background-color: transparent;
+            border-radius: 10px;
+            border: rgb(166, 84, 214) solid 2px;
+            color: rgb(166, 84, 214);
             cursor: pointer;
         }
 
+        input[type="submit"]:hover{
+            background-color: rgb(166, 84, 214);
+            color: white;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
         #result {
+            width: 100px;
+            height: 100px;
             margin-top: 20px;
             font-size: 20px;
-       }
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            background-color: rgb(166, 84, 214);
+            display: flex;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>LOVE MATCH</h1>
         <form id="love-match-form">
+
             <label for="name1">Boy's Name:</label>
             <input type="text" id="name1" name="name1" required>
+
             <br><br>
             <label for="name2">Girl's Name:</label>
             <input type="text" id="name2" name="name2" required>
+
             <br><br>
             <input type="submit" value="Submit">
+
         </form>
-        <div id="result"></div>
+        <div id="result" class="result">0%</div>
     </div>
 
     <script src="../src/assents/js/main.js"></script>
