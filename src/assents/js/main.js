@@ -7,6 +7,8 @@ document.getElementById('love-match-form').addEventListener('submit', function(e
     var totalLength = name1.length + name2.length;
     
     var percentage = (totalLength % 100);
+
+    var random = Math.floor(Math.random() * 10);
     
-    document.getElementById('result').textContent = `${percentage}%`;
+    document.getElementById('result').textContent = `${percentage+random}%`;
 });
